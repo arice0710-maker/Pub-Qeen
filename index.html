@@ -102,6 +102,62 @@ button:hover,
     /* ===== Footer ===== */
     footer { background: rgba(0,0,0,0.5); border-top:1px solid #333; padding:48px 16px; text-align:center; color:#888; }
   </style>
+<!-- ▼ 高級PUBフォント ▼ -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+<!-- ▼ 追加ホバー＆ギラ演出 ▼ -->
+<style>
+/* 全体フォントを高級PUB寄せ */
+body {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+}
+
+/* ナビ・リンクを上品ゴールド */
+a {
+  transition: all 0.3s ease;
+}
+
+/* ホバー時ギラッ */
+a:hover {
+  color: #D4AF37;
+  text-shadow: 0 0 6px rgba(212,175,55,0.8),
+               0 0 14px rgba(212,175,55,0.6);
+}
+
+/* ボタンだけ特別に派手 */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #B8962E, #FFD700, #B8962E);
+  box-shadow: 0 0 18px rgba(255,215,0,0.9);
+  color: #000;
+}
+
+/* 光が流れる演出 */
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transition: 0.6s;
+}
+
+.cta-button:hover::before {
+  left: 120%;
+}
+</style>
+
 </head>
 <body>
 
