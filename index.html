@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pub Queen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Yu+Gothic&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Global Styles ===== */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Yu Gothic', 'Playfair Display', sans-serif;
+      background-color:#0a0a0a;
+      color:#ccc;
+      line-height:1.6;
+    }
+    a { text-decoration:none; color:inherit; }
+    .container { max-width:1200px; margin:0 auto; padding:0 16px; }
+
+    /* ===== Typography ===== */
+    h1,h2,h3 { font-family: 'Playfair Display', serif; }
+    .gold-text { background: linear-gradient(90deg, #D4AF37, #FFD700); -webkit-background-clip: text; color: transparent; }
+
+    /* ===== Navigation ===== */
+    nav {
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:50;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid #333;
+      height:64px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 24px;
+    }
+    nav .nav-links { display:flex; gap:32px; }
+    nav .nav-links a:hover { color:#D4AF37; transition:0.3s; }
+
+    /* ===== Hero ===== */
+    .hero {
+      position:relative;
+      width:100%;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding-top:64px;
+      background: linear-gradient(135deg, rgba(139,69,19,0.3), rgba(0,0,0,0.7)),
+                  url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23191919" width="1200" height="800"/><circle cx="300" cy="200" r="150" fill="%23D4AF37" opacity="0.05"/><circle cx="900" cy="600" r="200" fill="%23D4AF37" opacity="0.03"/></svg>') center/cover no-repeat;
+    }
+    .hero h1 { font-size:5rem; letter-spacing:0.3em; }
+    .hero p { font-size:1.5rem; margin-top:16px; letter-spacing:0.2em; color:#ccc; }
+    .cta-button {
+      margin-top:24px;
+      border:2px solid #D4AF37;
+      background:transparent;
+      padding:12px 32px;
+      font-size:16px;
+      cursor:pointer;
+      color:#ccc;
+      transition:0.3s;
+    }
+    .cta-button:hover { background:#D4AF37; color:#0a0a0a; }
+
+    /* ===== Sections ===== */
+    section { padding:80px 0; }
+    h2 { font-size:3rem; margin-bottom:64px; text-align:center; }
+    h3 { font-size:1.5rem; margin-bottom:16px; color:#D4AF37; }
+    p { font-size:14px; color:#ccc; }
+    .grid { display:grid; gap:32px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); }
+
+    /* ===== About Image ===== */
+    .about-image { width:100%; height:400px; overflow:hidden; border-radius:16px; box-shadow:0 8px 24px rgba(0,0,0,0.5); }
+    .about-image img { width:100%; height:100%; object-fit:cover; }
+
+    /* ===== Info Section Icons ===== */
+    .icon { font-size:32px; margin-bottom:16px; display:block; }
+
+    /* ===== Footer ===== */
+    footer { background: rgba(0,0,0,0.5); border-top:1px solid #333; padding:48px 16px; text-align:center; color:#888; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="gold-text" style="font-weight:bold; font-size:1.5rem; letter-spacing:0.2em;">QUEEN</div>
+    <div class="nav-links">
+      <a href="#about">ABOUT</a>
+      <a href="#menu">MENU</a>
+      <a href="#info">INFORMATION</a>
+      <a href="#access">ACCESS</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h1 class="gold-text">QUEEN</h1>
+      <p>大人の隠れ家で過ごす、特別な夜</p>
+      <button class="cta-button" onclick="location.href='tel:08025627533'">ご予約・お問い合わせ</button>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2 class="gold-text">ABOUT</h2>
+    <div class="container grid grid-2">
+      <div>
+        <p>都会の喧騒から離れた、隠れ家的な空間。</p>
+        <p>Pub Queenは、大人の方々が心からリラックスできる、洗練されたスナックです。上質なお酒と心地よい音楽、そして温かなおもてなしで、あなたの特別な時間を演出いたします。</p>
+        <p>落ち着いた雰囲気の中で、日常を忘れ、ゆったりとした時間をお過ごしください。</p>
+      </div>
+      <div class="about-image">
+        <img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663108349885/cRVCZErwgcppwjOf.png" alt="Pub Queen - Champagne">
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" style="background:#1a1a1a;">
+    <h2 class="gold-text">MENU</h2>
+    <div class="container grid grid-3">
+      <div style="border:1px solid #333; padding:24px; border-radius:16px;">
+        <h3>ビール</h3>
+        <p>キリン・ラガー（瓶）</p>
+      </div>
+      <div style="border:1px solid #333; padding:24px; border-radius:16px;">
+        <h3>ウイスキー</h3>
+        <p>ハイボール / 水割り / ロック</p>
+      </div>
+      <div style="border:1px solid #333; padding:24px; border-radius:16px;">
+        <h3>焼酎</h3>
+        <p>レモンサワー / グレープフルーツサワー / ウーロンハイ / 緑茶ハイ / 炭酸割り / ロック</p>
+      </div>
+      <div style="border:1px solid #333; padding:24px; border-radius:16px;">
+        <h3>ソフトドリンク</h3>
+        <p>ウーロン茶 / アイスコーヒー / オレンジジュース</p>
+      </div>
+      <div style="border:1px solid #333; padding:24px; border-radius:16px;">
+        <h3>シャンパン・ワイン</h3>
+        <p>特別な日を彩る、厳選されたシャンパンとワインをご用意しております。</p>
+        <p style="font-size:12px; color:#888; margin-top:8px;">※飲み放題対象外（別料金）</p>
+      </div>
+      <div style="border:1px solid #333; padding:24px; border-radius:16px;">
+        <h3>おつまみ</h3>
+        <p>お酒に合う、こだわりのおつまみを各種取り揃えております。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Information Section -->
+  <section id="info">
+    <h2 class="gold-text">INFORMATION</h2>
+    <div class="container grid grid-3">
+      <!-- Hours -->
+      <div>
+        <span class="icon">⏰</span>
+        <h3>営業時間</h3>
+        <p style="white-space:pre-line;">
+平日
+19:00 - 25:00
+
+土日祝
+13:00 - 17:00
+19:00 - 25:00
+        </p>
+      </div>
+      <!-- Pricing -->
+      <div>
+        <span class="icon">💰</span>
+        <h3>料金システム</h3>
+        <p style="white-space:pre-line;">
+1セット(60分)飲み放題
+¥3,000(税別)
+
+カラオケ1曲 ¥200
+※生ビール・各種ボトルは別料金
+        </p>
+      </div>
+      <!-- Contact -->
+      <div>
+        <span class="icon">📞</span>
+        <h3>ご予約</h3>
+        <p>TEL: 080-2562-7533</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access Section -->
+  <section id="access" style="background:#1a1a1a;">
+    <h2 class="gold-text">ACCESS</h2>
+    <div class="container" style="margin-top:32px; text-align:center; color:#ccc;">
+      <!-- Google Map -->
+      <div style="width:100%; max-width:800px; margin:0 auto; height:400px; overflow:hidden; border-radius:16px;">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.570347227929!2d139.70283731526384!3d35.77448398014152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ae2b3a7fa3f%3A0xa927d22ab7139fd0!2z5p2x5Lqs6YO95aSn5a2m5p2x5LqsIOWbveWbnuWkjeWYn-OAguOBq-OBk-OBq-OBruOCpOODvOOCqg!5e0!3m2!1sja!2sjp!4v1700000000000"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <!-- Address & Access Info -->
+      <div style="margin-top:24px; line-height:1.8;">
+        <p><strong>住所：</strong>東京都北区赤羽西6丁目21‑10 モンシャトー本蓮沼1階</p>
+        <p><strong>最寄駅・バス：</strong>赤羽駅前バス乗り場1番から赤羽西6丁目バス停下車 徒歩30秒</p>
+        <p><strong>最寄駅：</strong>本蓮沼駅より徒歩20分</p>
+        <p><strong>駐車場：</strong>近隣コインパーキングをご利用ください</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section>
+    <h2 class="gold-text">特別な夜を</h2>
+    <div class="container" style="text-align:center; margin-top:32px;">
+      <p style="margin-top:16px; margin-bottom:32px;">Your place, your pace. — PUB QUEEN</p>
+      <button class="cta-button" onclick="location.href='tel:08025627533'">ご予約・お問い合わせ</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 Pub Queen. All rights reserved.
+  </footer>
+
+</body>
+</html>
