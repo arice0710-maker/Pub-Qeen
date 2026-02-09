@@ -102,29 +102,29 @@ button:hover,
     /* ===== Footer ===== */
     footer { background: rgba(0,0,0,0.5); border-top:1px solid #333; padding:48px 16px; text-align:center; color:#888; }
   </style>
-<!-- ▼ 高級PUBフォント ▼ -->
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
 
-<!-- ▼ 追加ホバー＆ギラ演出 ▼ -->
+
 <style>
-/* 全体フォントを高級PUB寄せ */
+
 body {
   font-family: 'Cormorant Garamond', 'Playfair Display', serif;
 }
 
-/* ナビ・リンクを上品ゴールド */
+
 a {
   transition: all 0.3s ease;
 }
 
-/* ホバー時ギラッ */
+
 a:hover {
   color: #D4AF37;
   text-shadow: 0 0 6px rgba(212,175,55,0.8),
                0 0 14px rgba(212,175,55,0.6);
 }
 
-/* ボタンだけ特別に派手 */
+
 .cta-button {
   position: relative;
   overflow: hidden;
@@ -136,7 +136,7 @@ a:hover {
   color: #000;
 }
 
-/* 光が流れる演出 */
+
 .cta-button::before {
   content: "";
   position: absolute;
@@ -171,10 +171,22 @@ a:hover {
   }
 
   .queen-logo {
+    font-family: 'Great Vibes', cursive;
     font-size: 1.1rem;
     letter-spacing: 0.12em;
   }
+@media (max-width: 768px) {
 
+  .cta-button:active {
+    color: #FFD75E;
+    box-shadow: 
+      0 0 12px rgba(255, 215, 94, 0.9),
+      0 0 24px rgba(255, 215, 94, 0.6);
+    background: rgba(255, 215, 94, 0.15);
+    transform: scale(0.97);
+  }
+
+}
   .nav-links a {
     font-size: 0.85rem;
     margin-left: 12px;
