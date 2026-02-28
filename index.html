@@ -114,8 +114,14 @@ img, video, svg, canvas {
       justify-content:space-between;
       padding:0 24px;
     }
-    nav .nav-links { display:flex; gap:32px; }
-    nav .nav-links a:hover { color:#D4AF37; transition:0.3s; }
+nav .nav-links { 
+  display:flex; 
+  gap:32px; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  max-width: 100%; 
+}
+nav .nav-links a:hover { color:#D4AF37; transition:0.3s; }
 
   
     .hero {
