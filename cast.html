@@ -34,6 +34,32 @@
       .cast-grid{grid-template-columns:1fr}
       .cast-photo{height:240px}
     }
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+nav, .nav-inner, .nav-links {
+  max-width: 100%;
+}
+
+.nav-links {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
   </style>
 </head>
 
